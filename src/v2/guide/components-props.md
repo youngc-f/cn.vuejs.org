@@ -311,7 +311,7 @@ Vue.component('my-component', {
 ```
 
 这尤其适合配合实例的 `$attrs` property 使用，该 property 包含了传递给一个组件的 attribute 名和 attribute 值，例如：
-
+注意:这里的$attrs不包含组件中props中定义的属性
 ```js
 {
   required: true,
@@ -320,7 +320,7 @@ Vue.component('my-component', {
 ```
 
 有了 `inheritAttrs: false` 和 `$attrs`，你就可以手动决定这些 attribute 会被赋予哪个元素。在撰写[基础组件](../style-guide/#基础组件名-强烈推荐)的时候是常会用到的：
-
+注意:这里所谓的会被赋予到哪个元素  是指根的子元素   PS(咱不会用.md,只能加'注意'作为提出变更的部分)
 ```js
 Vue.component('base-input', {
   inheritAttrs: false,
